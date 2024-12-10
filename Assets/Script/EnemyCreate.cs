@@ -31,6 +31,18 @@ public class EnemyCreate : MonoBehaviour
             GameObject newWalker2 = Instantiate(enemyWalker, spawning2.position, spawning2.rotation);
             Destroy(gameObject);
         }
+        if(s == true)
+        {
+            GameObject newSpawner = Instantiate(enemySpawner, spawning.position, spawning.rotation);
+            GameObject newSpawner2 = Instantiate(enemySpawner, spawning2.position, spawning2.rotation);
+            Destroy(gameObject);
+        }
+        if (a == true)
+        {
+            GameObject newAttacker = Instantiate(enemyAttacker, spawning.position, spawning.rotation);
+            GameObject newAttacker2 = Instantiate(enemyAttacker, spawning2.position, spawning2.rotation);
+            Destroy(gameObject);
+        }
 
     }
 

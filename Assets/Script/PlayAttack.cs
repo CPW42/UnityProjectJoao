@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackTest : MonoBehaviour
+public class PlayAttack : MonoBehaviour
 {
     public float life;
-    public PlayerHealtScript playerHealth;
+    public EnemyHealth enemyHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +14,7 @@ public class AttackTest : MonoBehaviour
     private void Awake()
     {
         Destroy(gameObject, life);
-        playerHealth = GameObject.Find("Player").GetComponent<PlayerHealtScript>();
+        enemyHealth = GameObject.FindWithTag("Enemy").GetComponent<EnemyHealth>();
     }
 
     // Update is called once per frame
@@ -24,9 +24,9 @@ public class AttackTest : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Player")
+        if(collision.gameObject.tag == "Enemy")
         {
-            playerHealth.playerCurrentHealth--;
+            enemyHealth.enemyCurrentHealth--;
             Destroy(gameObject);
         }
         Destroy(gameObject);

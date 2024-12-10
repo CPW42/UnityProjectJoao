@@ -11,6 +11,9 @@ public class PlayerScript : MonoBehaviour
     public float hoverSpeed;
     public float hoverFloat;
     public bool hoverActive;
+    public Transform pAttackSpawn;
+    public float pAttackSpeed;
+    public GameObject pAttack;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,11 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.F))
         {
             speed = originalSpeed;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            var attack = Instantiate(pAttack,pAttackSpawn.position, pAttackSpawn.rotation);
+            attack.GetComponent<Rigidbody>().velocity = pAttackSpawn.forward * pAttackSpeed;
         }
     }
 }
