@@ -6,6 +6,7 @@ public class PlayAttack : MonoBehaviour
 {
     public float life;
     public EnemyHealth enemyHealth;
+
     // Start is called before the first frame update
     void Start()
     {

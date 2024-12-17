@@ -22,6 +22,7 @@ public class PlayerScript : MonoBehaviour
         dashSpeed = speed * 2;
         hoverActive = false;
         
+        
     }
 
     // Update is called once per frame
