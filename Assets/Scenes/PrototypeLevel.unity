@@ -765,7 +765,7 @@ MonoBehaviour:
   runOut: 0
   jumperOff: 0
   hoverOff: 0
-  supportText: {fileID: 0}
+  supportText: {fileID: 902055288}
 --- !u!1 &361663612
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   dashSpeed: 0
-  cameraSpeed: 50
+  cameraSpeed: 100
   hoverSpeed: 3
   hoverFloat: 1
   hoverActive: 0

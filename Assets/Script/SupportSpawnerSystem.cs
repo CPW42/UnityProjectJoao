@@ -63,6 +63,6 @@ public class SupportSpawnerSystem : MonoBehaviour
         {
             runOut = true;
         }
-        supportText.GetComponent<Text>().text = supportMaxLimit.ToString();
+        supportText.GetComponent<Text>().text = jumperLimit.ToString();
     }
 }
