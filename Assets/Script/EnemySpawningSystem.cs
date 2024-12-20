@@ -9,10 +9,12 @@ public class EnemySpawningSystem : MonoBehaviour
     public bool spawnAllowed = false;
     public int limit;
     public int setLimit;
+    public GateScript gateScript;
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(spawning());
+        gateScript = GameObject.FindWithTag("Gate").GetComponent<GateScript>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,7 @@ public class EnemySpawningSystem : MonoBehaviour
         if (limit == setLimit)
         {
             spawnAllowed = false;
+            gateScript.limitFinished = true;
         }
 
     }

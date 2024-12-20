@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealtScript : MonoBehaviour
 {
@@ -19,5 +21,21 @@ public class PlayerHealtScript : MonoBehaviour
     void Update()
     {
         healthText.GetComponent<Text>().text = playerCurrentHealth.ToString();
+        if(playerCurrentHealth == 0)
+        {
+            RestartScene();
+        }
+    }
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Enemy")
+        {
+            playerCurrentHealth -= 1;
+        }
+    }
+    public void RestartScene()
+    {
+        Scene PrototypeLevel = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(PrototypeLevel.name);
     }
 }

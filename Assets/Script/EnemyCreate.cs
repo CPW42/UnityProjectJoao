@@ -7,6 +7,7 @@ public class EnemyCreate : MonoBehaviour
     public GameObject enemySpawner;
     public GameObject enemyWalker;
     public GameObject enemyAttacker;
+    public GameObject gate;
     public Transform spawning;
     public Transform spawning2;
     public bool s;
@@ -34,7 +35,7 @@ public class EnemyCreate : MonoBehaviour
         if(s == true)
         {
             GameObject newSpawner = Instantiate(enemySpawner, spawning.position, spawning.rotation);
-            GameObject newSpawner2 = Instantiate(enemySpawner, spawning2.position, spawning2.rotation);
+            GameObject newSpawner2 = Instantiate(gate, spawning2.position, spawning2.rotation);
             Destroy(gameObject);
         }
         if (a == true)

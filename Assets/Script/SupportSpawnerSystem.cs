@@ -15,7 +15,8 @@ public class SupportSpawnerSystem : MonoBehaviour
     public bool runOut;
     public bool jumperOff;
     public bool hoverOff;
-    public Text supportText;
+    public Text jumpText;
+    public Text hoverText;
     
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,8 @@ public class SupportSpawnerSystem : MonoBehaviour
         runOut = false;
         jumperOff = false;
         hoverOff = false;
-        supportText = GameObject.Find("Supporttext").GetComponent<Text>();
+        jumpText = GameObject.Find("JumpText").GetComponent<Text>();
+        hoverText = GameObject.Find("HoverText").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -63,6 +65,7 @@ public class SupportSpawnerSystem : MonoBehaviour
         {
             runOut = true;
         }
-        supportText.GetComponent<Text>().text = supportMaxLimit.ToString();
+        jumpText.GetComponent<Text>().text = jumperLimit.ToString();
+        hoverText.GetComponent<Text>().text = hoverLimit.ToString();
     }
 }
