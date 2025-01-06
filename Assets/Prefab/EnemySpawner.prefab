@@ -44,8 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d2568b4f420da4fad330b4d33f882a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingEnemy: {fileID: 0}
+  walkingEnemy: {fileID: 6265074461146401841, guid: ebc1ab081b3b37d4584aa3311f44ebd9, type: 3}
+  theSpawner: {fileID: 7452772593571465760}
   enemyTimer: 5
   spawnAllowed: 1
   limit: 0
   setLimit: 5
+  gateScript: {fileID: 0}

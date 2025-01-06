@@ -6,18 +6,20 @@ using UnityEngine.AI;
 public class EnemyFollowSecond : MonoBehaviour
 {
     public NavMeshAgent enemy;
-    public Transform player;
+    public GameObject player;
+    Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("MainCamera");
+        target = player.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        enemy.SetDestination(player.position);
+        enemy.SetDestination(target.position);
     }
 
 }

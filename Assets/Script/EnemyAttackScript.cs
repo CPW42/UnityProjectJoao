@@ -10,6 +10,7 @@ public class EnemyAttackScript : MonoBehaviour
     public float attackStart;
     public float attackWait;
     public Transform attackSpawning;
+    public GameObject target;
     public Transform player;
     public Vector3 playerLocation;
 
@@ -17,6 +18,8 @@ public class EnemyAttackScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("MainCamera");
+        player = target.transform;
         InvokeRepeating("Attacker", attackStart, attackWait);
     }
 

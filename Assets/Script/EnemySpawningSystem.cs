@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySpawningSystem : MonoBehaviour
 {
     public GameObject walkingEnemy;
+    public Transform theSpawner;
     public float enemyTimer;
     public bool spawnAllowed = false;
     public int limit;
@@ -15,6 +16,7 @@ public class EnemySpawningSystem : MonoBehaviour
     {
         StartCoroutine(spawning());
         gateScript = GameObject.FindWithTag("Gate").GetComponent<GateScript>();
+        
     }
 
     // Update is called once per frame
@@ -34,7 +36,7 @@ public class EnemySpawningSystem : MonoBehaviour
         while(spawnAllowed == true && limit < setLimit)
         {
             yield return wait;
-            GameObject newEnemy = Instantiate(walkingEnemy, new Vector3(Random.Range(-5f, 5f),0, Random.Range(-5f,5f)), Quaternion.identity);
+            GameObject newEnemy = Instantiate(walkingEnemy, new Vector3(Random.Range(-125f, -145f),18, Random.Range(55f,65f)), Quaternion.identity);
             limit++;
         }
     }

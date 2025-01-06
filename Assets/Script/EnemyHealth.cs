@@ -16,6 +16,7 @@ public class EnemyHealth : MonoBehaviour
     }
     private void Awake()
     {
+        helper = GameObject.FindGameObjectWithTag("Supporter");
          supportSpawner = helper.GetComponent<SupportSpawnerSystem>();
     }
     // Update is called once per frame
