@@ -23,3 +23,4 @@ public class EnemyFollowSecond : MonoBehaviour
     }
 
 }
+//link to the video i took reference for the code https://www.youtube.com/watch?v=6Ai0xg6xTUk

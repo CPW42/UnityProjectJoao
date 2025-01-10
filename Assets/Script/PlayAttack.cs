@@ -40,3 +40,4 @@ public class PlayAttack : MonoBehaviour
         Destroy(gameObject);
     }
 }
+

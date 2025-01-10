@@ -73,5 +73,7 @@ public class PlayerScript : MonoBehaviour
             var attack = Instantiate(pAttack,pAttackSpawn.position, pAttackSpawn.rotation);
             attack.GetComponent<Rigidbody>().velocity = pAttackSpawn.forward * pAttackSpeed;
         }
+        //this is where i got reference for some part of the code:
+        //https://www.youtube.com/watch?v=6Ai0xg6xTUk
     }
 }

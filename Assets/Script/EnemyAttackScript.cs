@@ -33,4 +33,5 @@ public class EnemyAttackScript : MonoBehaviour
         var shoot = Instantiate(attack,attackSpawning.position, attackSpawning.rotation);
         shoot.GetComponent<Rigidbody>().velocity = attackSpawning.forward * attackSpeed;
     }
+    //this is where i got reference for some part of the code https://www.youtube.com/watch?v=6Ai0xg6xTUk
 }
