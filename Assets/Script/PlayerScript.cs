@@ -75,5 +75,6 @@ public class PlayerScript : MonoBehaviour
         }
         //this is where i got reference for some part of the code:
         //https://www.youtube.com/watch?v=6Ai0xg6xTUk
+        //https://github.com/LSBUGPG/movement-tutorial?tab=readme-ov-file
     }
 }

@@ -39,3 +39,4 @@ public class PlayerHealtScript : MonoBehaviour
         SceneManager.LoadScene(PrototypeLevel.name);
     }
 }
+// I used a bit of code from this video: https://www.youtube.com/watch?v=vNL4WYgvwd8
